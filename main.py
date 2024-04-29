@@ -8,7 +8,7 @@ def index():
 
 @app.route('/org')
 def org():
-    return render_template('342698.pdf')
+    return render_template('https://raw.githubusercontent.com/BedsAreDragons/IRAO/main/sids/342698.svg')
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
