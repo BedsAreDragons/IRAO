@@ -1,56 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRAO - International Roblox Aviation Organisation</title>
-    <!-- Embedding the font using link -->
-    <link href="https://fonts.cdnfonts.com/css/swiss-721" rel="stylesheet"> 
-    <!-- Embedding the font using @import -->
-    <style> @import url('https://fonts.cdnfonts.com/css/swiss-721'); </style>
-    <style>
-        body {
-            font-family: 'Swiss 721', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #007bff;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to IRAO</h1>
-        <p>International Roblox Aviation Organisation</p>
-        <a href="/perthchart" class="btn">Perth Charts</a>
-        <a href="https://google.com" target="_blank">Click here</a>
-        <br>
-    </div>
-</body>
+<html>
+ 
+  <head>
+  </head>
+ 
+  <body>
+    <button>Fullscreen</button>
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = "https://0feab42b-6ec0-417e-879d-cd553ba2dfdc-00-v1u3ktgu9f6v.riker.replit.dev/"; //this is the link, replace it with your own
+      if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+          document.querySelector('button').style.bacground = 'grey';
+          document.querySelector('button').innerHTML = "Already Open";
+        };
+      }
+ 
+    </script>
+  </body>
+ 
 </html>
