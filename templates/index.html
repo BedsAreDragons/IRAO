@@ -1,37 +1,41 @@
 <html>
  
-  <head>
-  </head>
+<head>
+</head>
  
-  <body>
-    <button>Fullscreen</button>
-    <script>
-      var urlObj = new window.URL(window.location.href);
-      var url = "https://uvpro.replit.app/"; //this is the link, replace it with your own
-      if (url) {
-        var win;
- 
-        document.querySelector('button').onclick = function() {
-          if (win) {
-            win.focus();
-          } else {
-            win = window.open();
-            win.document.body.style.margin = '0';
-            win.document.body.style.height = '100vh';
-            var iframe = win.document.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.margin = '0';
-            iframe.src = url;
-            win.document.body.appendChild(iframe);
-          }
-          document.querySelector('button').style.bacground = 'grey';
-          document.querySelector('button').innerHTML = "Already Open";
-        };
-      }
- 
-    </script>
-  </body>
+<body>
+  <button id="fullscreen">Fullscreen</button>
+  <button id="terms">Terms and Conditions</button>
+  <script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://uvpro.replit.app/"; // Replace this link with your own
+    if (url) {
+      var win;
+
+      document.getElementById('fullscreen').onclick = function() {
+        if (win) {
+          win.focus();
+        } else {
+          win = window.open();
+          win.document.body.style.margin = '0';
+          win.document.body.style.height = '100vh';
+          var iframe = win.document.createElement('iframe');
+          iframe.style.border = 'none';
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.margin = '0';
+          iframe.src = url;
+          win.document.body.appendChild(iframe);
+        }
+        document.getElementById('fullscreen').style.background = 'grey';
+        document.getElementById('fullscreen').innerHTML = "Already Open";
+      };
+
+      document.getElementById('terms').onclick = function() {
+        window.open("/tac", "_blank"); // Replace "/tac" with the actual URL path to your terms and conditions page
+      };
+    }
+  </script>
+</body>
  
 </html>
