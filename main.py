@@ -6,9 +6,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/perthchart')
+@app.route('/tac')
 def org():
-    return render_template('perth-perth-org.html')
+    return render_template('tac.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
